@@ -35,7 +35,7 @@ conda install autopep8
 
 ### Installation manuelle
 
-1. Téléchargez le fichier `.vsix` depuis les [releases GitHub](https://github.com/votre-username/odoo-xml-python-formatter/releases)
+1. Téléchargez le fichier `.vsix` depuis les [releases GitHub](https://github.com/fabien-bibe/odoo-xml-python-formatter/releases)
 2. Dans VS Code, ouvrez la palette de commandes (`Ctrl+Shift+P`)
 3. Tapez "Extensions: Install from VSIX..."
 4. Sélectionnez le fichier téléchargé
