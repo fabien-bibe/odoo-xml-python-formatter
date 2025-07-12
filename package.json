@@ -3,10 +3,10 @@
     "displayName": "Odoo XML Python Formatter",
     "description": "Formate automatiquement le code Python dans les balises <code> des fichiers XML Odoo lors de l'enregistrement.",
     "version": "0.0.1",
-    "publisher": "votre-nom",
+    "publisher": "websystem.fr",
     "author": {
-        "name": "Votre Nom",
-        "email": "votre.email@example.com"
+        "name": "Fabien BIBÉ",
+        "email": "contact@websystem.fr"
     },
     "license": "MIT",
     "repository": {
