@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Test case 1: Simple Python code -->
+        <record id="test_action_1" model="ir.actions.server">
+            <field name="name">Test Action 1</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">
+                <code>
+def test_function():
+x=1
+y=2
+if x>y:
+return False
+else:
+return True
+result=test_function()
+                </code>
+            </field>
+        </record>
+
+        <!-- Test case 2: Complex Python code with loops -->
+        <record id="test_action_2" model="ir.actions.server">
+            <field name="name">Test Action 2</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">
+                <code>
+partners=env['res.partner'].search([])
+for partner in partners:
+if partner.email:
+partner.write({'customer_rank':1})
+log('Updated partner: %s'%partner.name)
+                </code>
+            </field>
+        </record>
+
+        <!-- Test case 3: Multiple code blocks -->
+        <record id="test_action_3" model="ir.actions.server">
+            <field name="name">Test Action 3</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">
+                <code>
+# First block
+def helper_function():
+return "Hello World"
+                </code>
+            </field>
+        </record>
+
+        <record id="test_action_4" model="ir.actions.server">
+            <field name="name">Test Action 4</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">
+                <code>
+# Second block
+result=helper_function()
+log(result)
+                </code>
+            </field>
+        </record>
+    </data>
+</odoo>

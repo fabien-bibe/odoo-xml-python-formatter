@@ -1,0 +1,115 @@
+{
+    "name": "odoo-xml-python-formatter",
+    "displayName": "Odoo XML Python Formatter",
+    "description": "Formate automatiquement le code Python dans les balises <code> des fichiers XML Odoo lors de l'enregistrement.",
+    "version": "0.0.1",
+    "publisher": "votre-nom",
+    "author": {
+        "name": "Votre Nom",
+        "email": "votre.email@example.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/votre-username/odoo-xml-python-formatter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/votre-username/odoo-xml-python-formatter/issues"
+    },
+    "homepage": "https://github.com/votre-username/odoo-xml-python-formatter#readme",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Formatters",
+        "Other"
+    ],
+    "keywords": [
+        "odoo",
+        "xml",
+        "python",
+        "formatter",
+        "autopep8",
+        "code-formatting"
+    ],
+    "activationEvents": [
+        "onLanguage:xml"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "odoo-xml-python-formatter.formatDocument",
+                "title": "Format Python Code in XML",
+                "category": "Odoo Formatter"
+            },
+            {
+                "command": "odoo-xml-python-formatter.formatSelection",
+                "title": "Format Selected Python Code in XML",
+                "category": "Odoo Formatter"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "odoo-xml-python-formatter.formatDocument",
+                    "when": "resourceExtname == .xml",
+                    "group": "1_modification"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "odoo-xml-python-formatter.formatDocument",
+                    "when": "resourceExtname == .xml"
+                },
+                {
+                    "command": "odoo-xml-python-formatter.formatSelection",
+                    "when": "resourceExtname == .xml"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "Odoo XML Python Formatter",
+            "properties": {
+                "odoo-xml-python-formatter.formatOnSave": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Formate automatiquement le code Python lors de l'enregistrement des fichiers XML"
+                },
+                "odoo-xml-python-formatter.autopep8Args": {
+                    "type": "array",
+                    "default": [
+                        "--max-line-length=79",
+                        "--aggressive",
+                        "--aggressive"
+                    ],
+                    "description": "Arguments à passer à autopep8"
+                },
+                "odoo-xml-python-formatter.enableLogging": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Active les logs de débogage"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js",
+        "vscode:prepublish": "npm run lint",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.74.0",
+        "@types/node": "16.x",
+        "eslint": "^8.28.0",
+        "typescript": "^4.9.4",
+        "@vscode/test-electron": "^2.2.0",
+        "vsce": "^2.15.0"
+    },
+    "dependencies": {
+        "@xmldom/xmldom": "^0.8.10"
+    }
+}
