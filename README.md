@@ -43,7 +43,7 @@ conda install autopep8
 ### Depuis les sources
 
 ```bash
-git clone https://github.com/votre-username/odoo-xml-python-formatter.git
+git clone https://github.com/fabien-bibe/odoo-xml-python-formatter.git
 cd odoo-xml-python-formatter
 npm install
 npm run package
@@ -169,7 +169,7 @@ Les contributions sont les bienvenues !
 ### Développement local
 
 ```bash
-git clone https://github.com/votre-username/odoo-xml-python-formatter.git
+git clone https://github.com/fabien-bibe/odoo-xml-python-formatter.git
 cd odoo-xml-python-formatter
 npm install
 ```
@@ -184,7 +184,7 @@ npm test
 
 ### Signaler un bug
 
-Ouvrez une [issue GitHub](https://github.com/votre-username/odoo-xml-python-formatter/issues) avec :
+Ouvrez une [issue GitHub](https://github.com/fabien-bibe/odoo-xml-python-formatter/issues) avec :
 - Version de VS Code
 - Version de l'extension
 - Exemple de fichier XML problématique
