@@ -11,12 +11,12 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/votre-username/odoo-xml-python-formatter.git"
+        "url": "https://github.com/fabien-bibe/odoo-xml-python-formatter.git"
     },
     "bugs": {
-        "url": "https://github.com/votre-username/odoo-xml-python-formatter/issues"
+        "url": "https://github.com/fabien-bibe/odoo-xml-python-formatter/issues"
     },
-    "homepage": "https://github.com/votre-username/odoo-xml-python-formatter#readme",
+    "homepage": "https://github.com/fabien-bibe/odoo-xml-python-formatter#readme",
     "engines": {
         "vscode": "^1.74.0"
     },
